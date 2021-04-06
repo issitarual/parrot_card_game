@@ -1,0 +1,19 @@
+body{
+    background-color: #EEF9BF;
+}
+h1{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 56px;
+    font-weight: bold;
+    color: #75B79E;
+    margin: 40px auto;
+}
+
+@media (max-width: 600px)
+{
+    h1{
+    font-size: 36px;
+    width: 90%;
+    }
+}
