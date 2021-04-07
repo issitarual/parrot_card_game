@@ -9,11 +9,42 @@ h1{
     color: #75B79E;
     margin: 40px auto;
 }
+img{
+    width: 100px;
+}
+div{
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.carta{
+    width: 117px;
+    height: 146px;
+    background-color: #A7E9AF;
+    border-radius: 5px;
+    border-style: inset;
+    border: solid 1px #99CEA8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 34px;
+}
 
 @media (max-width: 600px)
 {
     h1{
     font-size: 36px;
     width: 90%;
+    }
+
+    div{
+        flex-direction: column;
+    }
+
+    .carta{
+        margin-bottom: 34px;
     }
 }
