@@ -9,9 +9,22 @@ h1{
     color: #75B79E;
     margin: 40px auto;
 }
+
 img{
     width: 100px;
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
 }
+
+.desaparecer{
+    display: none;
+}
+
+.click{
+    transform: rotateY(180deg);
+}
+
 div{
     margin: auto;
     width: 90%;
@@ -31,6 +44,7 @@ div{
     justify-content: center;
     align-items: center;
     margin: 34px;
+    transform: rotateY(0deg);
 }
 
 @media (max-width: 600px)
