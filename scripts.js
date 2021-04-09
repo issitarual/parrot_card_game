@@ -33,26 +33,46 @@ function virar_a_carta(elemento) {
    if(elemento){
        let virar_papagaio = elemento.childNodes[1]
        virar_papagaio.classList.add('desaparecer');
+       virar_papagaio.classList.add('desvirei');
 
-       let devirar_gif = elemento.childNodes[3];
-       devirar_gif.classList.remove('desaparecer')
-       devirar_gif.classList.add('virei')
+       let desvirar_gif = elemento.childNodes[3];
+       desvirar_gif.classList.remove('desaparecer')
+       desvirar_gif.classList.add('virei')
 
         console.log(virar_papagaio);
-        console.log(devirar_gif);
+        console.log(desvirar_gif);
 
         contador_de_cliques = contador_de_cliques + 1;
-        // acrescentar classe ('virei')?
-      // if(contador_de_cliques%2 == 0){
-        //   if(src da primeira img ('virei') != src da segunda img ('virei')){
-                //remove ('virei')
-                //add (desaparecer )no gif 
-                //remove (desaparecer) no gif
-          //}
-            //else{
-                //remove ('virei');
-            //}
-      // }       
+
+         if(contador_de_cliques%2 == 0){
+            let viradas = document.querySelectorAll(".virei")
+            let viradas_array = Array.from(viradas);
+            console.log(viradas_array);
+            if(viradas_array[0] !== viradas_array[1]){
+               
+                let virar_gif = document.querySelectorAll('virei');
+                let array_virar_gif = Array.from(virar_gif);
+                array_virar_gif.classList.add('desaparecer'); 
+                array_virar_gif.classList.remove('virei');
+
+                let desvirar_papagaio = document.querySelectorAll('desvirei');
+                let array_desvirar_gif = Array.from(desvirar_gif);
+                array_desvirar_papagaio.classList.remove ('desaparecer');
+                array_desvirar_papagaio.classList.remove('desvirei')
+                
+                alert("errou");
+                console.log(viradas_array);
+            }
+            else{
+                let acertou_papagaio = document.querySelectorAll('desvirei')
+                acertou_papagaio.classList.remove('desvirei');
+
+                let acertou_gif = document.querySelectorAll('virei')
+                acertou_gif.classList.remove('virei');
+
+                alert("acertou");
+            }
+      }       
       console.log(contador_de_cliques);
  }
 }
