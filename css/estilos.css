@@ -12,16 +12,27 @@ h1{
 
 img{
     width: 100px;
-    backface-visibility: hidden;
-    transition: all .5s;
-    transform-style: preserve-3d;
 }
 
 .desaparecer{
     display: none;
 }
 
-.click{
+.frente{
+    backface-visibility: hidden;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+.frente.desvirei{
+    transform: rotateY(0deg);
+}
+
+.verso{
+    transform: rotateY(-180deg);
+}
+
+.verso.virei{
     transform: rotateY(180deg);
 }
 
